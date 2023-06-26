@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "nocreeper",
+	"version": "${version}",
+	"name": "Example mod",
+	"description": "Ban the explosion of creeper",
+	"authors": [
+		"SDSXC"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/nocreeper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sdsxc.NoCreeper"
+		],
+		"client": [
+			"com.sdsxc.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"nocreeper.mixins.json",
+		{
+			"config": "nocreeper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
